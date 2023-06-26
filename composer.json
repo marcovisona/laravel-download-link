@@ -1,8 +1,8 @@
 {
-    "name": "armancodes/laravel-download-link",
+    "name": "marcovisona/laravel-download-link",
     "description": "A simple Laravel package for generating download links with options such as expire time, IP restrictions, etc.",
     "keywords": [
-        "armancodes",
+        "marcovisona",
         "laravel-download-link"
     ],
     "homepage": "https://github.com/armancodes/laravel-download-link",
