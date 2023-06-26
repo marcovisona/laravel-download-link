@@ -4,6 +4,7 @@ namespace Armancodes\DownloadLink\Http\Controllers;
 
 use Armancodes\DownloadLink\Models\DownloadLink;
 use Armancodes\DownloadLink\Models\DownloadLinkIpAddress;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 
 class DownloadLinkController
@@ -54,7 +55,7 @@ class DownloadLinkController
             return;
         }
 
-        abort_if(now() > $downloadLink->expire_time, 403, 'Download link is expired!');
+        abort_if(Carbon::now()->isAfter($downloadLink->expire_time), 403, 'Download link is expired!');
     }
 
     private function ipIsAllowed($downloadLink)
